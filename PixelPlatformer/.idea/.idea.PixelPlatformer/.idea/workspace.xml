@@ -10,6 +10,12 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/LifeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/JumpController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2nOAYDADRWtwn867gUqjzRq8XQt" />

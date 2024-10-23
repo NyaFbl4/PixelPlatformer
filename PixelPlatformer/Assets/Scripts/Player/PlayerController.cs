@@ -5,30 +5,30 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] public Rigidbody2D rb;
-    [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private Animator anim;
+    [SerializeField] public Rigidbody2D rigidbody;
+    [SerializeField] private SpriteRenderer _sprite;
+    [SerializeField] private Animator _anim;
 
-    private bool isJumping = false;      // Флаг, указывающий, выполняется ли прыжок
-    private bool isGrounded = false;     // Флаг, указывающий, находится ли персонаж на земле
+    private bool _isJumping = false;      // Флаг, указывающий, выполняется ли прыжок
+    private bool _isGrounded = false;     // Флаг, указывающий, находится ли персонаж на земле
     public bool isWall = false;
 
-    private int jumpCount = 0;           // Количество выполненных прыжков
-    private int maxJumpCount = 2;         // максимальное количество прыжков
-    private bool doubleJumpAllowed = true;// Разрешение на двойной прыжок
+    private int _jumpCount = 0;            // Количество выполненных прыжков
+    private int _maxJumpCount = 2;         // максимальное количество прыжков
+    private bool _doubleJumpAllowed = true;// Разрешение на двойной прыжок
 
-    [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private LayerMask _jumpableGround;
 
-                     public float dirX = 0f;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private float gravitation = -2f;
+                     public float _dirX = 0f;
+    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _jumpForce = 5f;
+    [SerializeField] private float _gravitation = -2f;
 
-    [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioSource _jumpSoundEffect;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -38,62 +38,58 @@ public class PlayerController : MonoBehaviour
 
         if (isWall)
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, gravitation, float.MaxValue));
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, Mathf.Clamp(rigidbody.velocity.y, _gravitation, float.MaxValue));
         }                
     }
 
     private void Move()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
+        _dirX = Input.GetAxisRaw("Horizontal");
         if (isWall == false)
         { 
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            rigidbody.velocity = new Vector2(_dirX * _moveSpeed, rigidbody.velocity.y);
         }
     }
 
+    
     private void Jump()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            if (isGrounded || (doubleJumpAllowed && jumpCount < 2))
+            if (_isGrounded || (_doubleJumpAllowed && _jumpCount < 2))
             {
-                jumpCount++;
+                _jumpCount++;
                 if (!isWall)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                    isJumping = true;
+                    rigidbody.velocity = new Vector2(rigidbody.velocity.x, _jumpForce);
+                    _isJumping = true;
                                      
                 }
                 else if (isWall)
                 {
 
-                    if (sprite.flipX == false)
+                    if (_sprite.flipX == false)
                     {
-                        rb.velocity = new Vector2(-1, jumpForce);
+                        rigidbody.velocity = new Vector2(-1, _jumpForce);
                     }
-                    else if (sprite.flipX == true) 
+                    else if (_sprite.flipX == true) 
                     {
-                        rb.velocity = new Vector2(1, jumpForce);
+                        rigidbody.velocity = new Vector2(1, _jumpForce);
                     }
                 }
             }
         }
     }
 
-    public void Test()
-    {
-        Debug.Log("TEST");
-    }
-
     public void FlipSprite()
     {
-        if (dirX > 0f && isWall != true)
+        if (_dirX > 0f && isWall != true)
         {
-            sprite.flipX = false;
+            _sprite.flipX = false;
         }
-        else if (dirX < 0f && isWall != true)
+        else if (_dirX < 0f && isWall != true)
         {
-            sprite.flipX = true;
+            _sprite.flipX = true;
         }
     }
 
@@ -102,9 +98,9 @@ public class PlayerController : MonoBehaviour
         // Обработка касания земли
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            _isGrounded = true;
             isWall = false;
-            jumpCount = 0;
+            _jumpCount = 0;
             
             Debug.Log("земля");
 
@@ -112,7 +108,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             isWall = true;
-            jumpCount = 1;
+            _jumpCount = 1;
 
             Debug.Log("коснулся стены");
         }
@@ -123,21 +119,21 @@ public class PlayerController : MonoBehaviour
         // Обработка отсутствия касания земли
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false;
+            _isGrounded = false;
             Debug.Log("воздух");
-            jumpCount = 1;
+            _jumpCount = 1;
         }
         if (collision.gameObject.CompareTag("Wall"))
         {
             isWall = false;
 
-            if (sprite.flipX == true)
+            if (_sprite.flipX == true)
             {
-                sprite.flipX = false;
+                _sprite.flipX = false;
             }
             else
             {
-                sprite.flipX = true;
+                _sprite.flipX = true;
             }
         }
     }

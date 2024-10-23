@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    [SerializeField] private PlayerController PC;
+    [SerializeField] private PlayerController _playerController;
 
     private Animator anim;
 
@@ -24,25 +24,25 @@ public class AnimationController : MonoBehaviour
     {
         MovementState state;
 
-        if (PC.dirX != 0f)
+        if (_playerController._dirX != 0f)
         {
             state = MovementState.running;
-            PC.FlipSprite();
+            _playerController.FlipSprite();
         }
         else
         {
             state = MovementState.idle;
         }
 
-        if (PC.rb.velocity.y > .1f)
+        if (_playerController.rigidbody.velocity.y > .1f)
         {
             state = MovementState.jumping;
         }
-        else if (PC.rb.velocity.y < -.1f && !PC.isWall)
+        else if (_playerController.rigidbody.velocity.y < -.1f && !_playerController.isWall)
         {
             state = MovementState.falling;
         }
-        else if (PC.isWall)
+        else if (_playerController.isWall)
         {
             state = MovementState.WallJump;
         }

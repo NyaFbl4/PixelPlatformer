@@ -8,9 +8,9 @@ public class LifeController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
-    [SerializeField] public int live;
-    [SerializeField] public float knockbackForce = 10f; // Сила отталкивания
-    [SerializeField] public float knockbackAngle = 45f; // Угол отталкивания
+    [SerializeField] private int _live;
+    [SerializeField] private float _knockbackForce = 10f; // Сила отталкивания
+    [SerializeField] private float _knockbackAngle = 45f; // Угол отталкивания
 
     private bool isDie = false;
 
@@ -23,7 +23,7 @@ public class LifeController : MonoBehaviour
     public void TakeDamage(Vector3 damageSource)
     {
         Vector3 direction = (transform.position - damageSource).normalized;
-        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        rb.AddForce(direction * _knockbackForce, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,8 +45,8 @@ public class LifeController : MonoBehaviour
             if (contact.normal.y > 0.5f) // Проверяем, что касание произошло сверху
             {
                 Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-                Vector2 knockbackDirectionWithAngle = Quaternion.Euler(0, 0, knockbackAngle) * knockbackDirection;
-                rb.AddForce(knockbackDirectionWithAngle * knockbackForce, ForceMode2D.Impulse);
+                Vector2 knockbackDirectionWithAngle = Quaternion.Euler(0, 0, _knockbackAngle) * knockbackDirection;
+                rb.AddForce(knockbackDirectionWithAngle * _knockbackForce, ForceMode2D.Impulse);
             }
         }
     }
