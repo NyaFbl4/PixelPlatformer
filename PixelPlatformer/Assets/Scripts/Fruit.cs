@@ -10,7 +10,7 @@ public class Fruit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameManager.Instance.AddScore(addScore);
+            //GameManager.Instance.AddScore(addScore);
             Debug.Log("Destroy");
             Destroy(this.gameObject);
         }
