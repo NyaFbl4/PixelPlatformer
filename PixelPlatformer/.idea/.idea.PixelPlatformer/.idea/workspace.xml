@@ -15,16 +15,31 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/LifeController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/JumpController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Fruit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/IGameListeners.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager/GameState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/Instellers/SystemIsntaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/Instellers/CharacterInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/CharacterInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/CharacterStateInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/JumpController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/SpriteController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/JumpController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/MoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/SpriteController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/MoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/JumpComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterStateInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/SpriteComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/AnimationController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2nOAYDADRWtwn867gUqjzRq8XQt" />
