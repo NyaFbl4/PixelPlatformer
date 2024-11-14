@@ -38,8 +38,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterStateInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/SpriteComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/AnimationController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2nOAYDADRWtwn867gUqjzRq8XQt" />
