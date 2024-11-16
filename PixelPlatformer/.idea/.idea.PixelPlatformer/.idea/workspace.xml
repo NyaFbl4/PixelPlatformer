@@ -40,6 +40,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/AnimationController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/IHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/ITakeDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/HealthPointComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Trap/Trap.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/Components/LifeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Trap/FireBoxController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2nOAYDADRWtwn867gUqjzRq8XQt" />

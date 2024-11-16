@@ -948,6 +948,11 @@
             <e p="zenject.asmdef" t="Include" />
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="Новая папка (5)" t="Include">
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Character" t="Include">
             <e p="AnimationController.cs" t="Include" />
@@ -955,6 +960,7 @@
             <e p="CharacterController.cs" t="Include" />
             <e p="CharacterStateInfo.cs" t="Include" />
             <e p="Components" t="Include">
+              <e p="HealthPointComponent.cs" t="Include" />
               <e p="JumpComponent.cs" t="Include" />
               <e p="LifeController.cs" t="Include" />
               <e p="MoveComponent.cs" t="Include" />
@@ -962,9 +968,16 @@
             </e>
             <e p="PlayerController.cs" t="Include" />
           </e>
+          <e p="Enemy" t="Include">
+            <e p="Trap" t="Include">
+              <e p="FireBoxController.cs" t="Include" />
+              <e p="Trap.cs" t="Include" />
+            </e>
+          </e>
           <e p="Fruit.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IMove.cs" t="Include" />
+            <e p="ITakeDamage.cs" t="Include" />
           </e>
           <e p="StickyPlatform.cs" t="Include" />
           <e p="System" t="Include">

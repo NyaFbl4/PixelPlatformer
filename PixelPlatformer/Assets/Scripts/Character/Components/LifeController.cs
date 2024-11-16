@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using PixelPlatformer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LifeController : MonoBehaviour
+public class LifeController : MonoBehaviour, ITakeDamage
 {
     private Rigidbody2D rb;
     private Animator anim;
 
-    [SerializeField] private int _live;
-    [SerializeField] private float _knockbackForce = 10f; // Сила отталкивания
-    [SerializeField] private float _knockbackAngle = 45f; // Угол отталкивания
+    //[SerializeField] private int _live;
+    //[SerializeField] private float _knockbackForce = 10f; // Сила отталкивания
+    //[SerializeField] private float _knockbackAngle = 45f; // Угол отталкивания
 
     private bool isDie = false;
 
@@ -20,12 +21,18 @@ public class LifeController : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-    public void TakeDamage(Vector3 damageSource)
+    //public void TakeDamage(Vector3 damageSource)
+
+    public void TakeDamage()
     {
+        Die();
+        /*
         Vector3 direction = (transform.position - damageSource).normalized;
         rb.AddForce(direction * _knockbackForce, ForceMode2D.Impulse);
+        */
     }
 
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Trap"))
@@ -34,7 +41,9 @@ public class LifeController : MonoBehaviour
             Die();
         }
     }
-
+    */
+    
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Opponent")) // Предположим, что "Enemy" - тег для врагов
@@ -50,12 +59,14 @@ public class LifeController : MonoBehaviour
             }
         }
     }
-
+    */
+    
+    /*
     private void TakeDamage(int damage)
     {
         Debug.Log(damage);
     }
-
+    */
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;

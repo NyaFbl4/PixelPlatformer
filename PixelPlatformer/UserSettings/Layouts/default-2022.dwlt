@@ -77,7 +77,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 104
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,7 +341,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 330}
     m_SelectedIDs: ac6e0000
     m_LastClickedID: 28332
-    m_ExpandedIDs: 00000000206e0000226e00007a6e00007e6e000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000226e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -369,7 +369,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000226e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,8 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Enemies/Turtle
+    - "Assets/Resources/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430
+      (5)"
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -585,16 +586,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Resources/Enemies/Turtle
+  - "Assets/Resources/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430
+    (5)"
   m_LastFoldersGridSize: 46
   m_LastProjectPath: "C:\\Users\\lomok\\Desktop\\Unity\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\PixelPlatformer\\PixelPlatformer"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 450}
-    m_SelectedIDs: f86e0000
-    m_LastClickedID: 28408
-    m_ExpandedIDs: 00000000206e0000226e00007a6e00007e6e0000846e0000ac6e000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 458}
+    m_SelectedIDs: e86e0000
+    m_LastClickedID: 28392
+    m_ExpandedIDs: 00000000226e0000786e00009c6e0000e86e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -622,7 +624,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000206e0000226e0000
+    m_ExpandedIDs: 00000000226e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -650,7 +652,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000d66200005a2b0000ac2f00004c2a0000ca2f0000
+    m_ExpandedInstanceIDs: c6230000d66200005a2b0000ac2f00004c2a0000ca2f00003a6f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -762,9 +764,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14fbffff
-      m_LastClickedID: -1260
-      m_ExpandedIDs: a2f1ffff14fbffff9e6c0000
+      m_SelectedIDs: 2cfbffff
+      m_LastClickedID: -1236
+      m_ExpandedIDs: 2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1170,9 +1172,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.5931123, y: 0.2693602, z: 0}
+    m_Target: {x: 0.47896844, y: 0.97257453, z: 0}
     speed: 2
-    m_Value: {x: 0.5931123, y: 0.2693602, z: 0}
+    m_Value: {x: 0.47896844, y: 0.97257453, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1222,9 +1224,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.8536966
+    m_Target: 1.4113436
     speed: 2
-    m_Value: 0.8536966
+    m_Value: 1.4113436
   m_Ortho:
     m_Target: 0
     speed: 2
